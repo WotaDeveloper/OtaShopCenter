@@ -8,7 +8,7 @@ var app = new Vue({
     methods: {
         confirm: function () {
             if (confirm("ยืนยันที่จะขายสินค้า ?")) {
-                window.location.assign("localhost:2018/OtaShopCenter/formregis.html");
+                window.location.assign("https://otashopcenter.firebaseapp.com/formregis.html");
                 console.log("Success");
             } else {
                 console.log("Cancel");
@@ -16,7 +16,7 @@ var app = new Vue({
         },
         freeconfirm: function () {
             if (confirm("ยืนยันที่จะปล่อยแบบฟรี ?")) {
-                window.location.assign("localhost:2018/OtaShopCenter/formregis.html");
+                window.location.assign("https://otashopcenter.firebaseapp.com/formregis.html");
                 console.log("Success");
             } else {
                 console.log("Cancel");
@@ -32,3 +32,9 @@ var app = new Vue({
 });
 
 
+// var regis = new Vue ({
+//     el: "regis",
+//     data: {
+
+//     }
+// });

@@ -10,25 +10,33 @@
         
     </head>
     <body>
-        <h1 class="is-size-1 has-text-link">BNK48 Shop Center</h1>
+        <h1 class="is-size-3 has-text-link has-background-primary has-text-centered">BNK48 Shop Center</h1>
         <div id="app">
-            <p>1.) {{ name }}<p>
             <div>
-                <img src="img/photoset.jpg">
+                <div class="box">
+                    <p class="is-size-5">{{ name }}</p>
+                    <img class="image is-1024x1024 has-text-centered" src="img/photoset.jpg">
+                    <div class="has-text-centered">
+                        <button class="button is-primary" v-on:click="previousgoods">สินค้าชิ้นก่อนหน้า</button>
+                        <button class="button is-primary" v-on:click="nextgoods">สินค้าชิ้นถัดไป</button>
+                    </div>
+                </div>
                 <div>
-                    <h2 v-if="price < 0">
-                        การแสดงราคาผิดพลาด
-                    </h2>
-                    <h2 v-else>
-                        {{ price }} บาท
-                    </h2>
-                    <button class="button is-link" v-on:click="price += 100">เพิ่มราคา</button>
-                    <button class="button is-danger" v-if="price === 0" v-on:click="price -= 100" disabled>ลดราคา</button>
-                    <button class="button is-danger" v-else v-on:click="price -= 100">ลดราคา</button>
-                    <button class="button is-success" v-if="price === 0" disabled>ยืนยันขาย</button>
-                    <button class="button is-success" v-else v-on:click="confirm">ยืนยันขาย</button>
+                    <div class="box is-small">
+                        <p>
+                            {{ price }} บาท
+                        </p>
+                        <button class="button is-link" v-on:click="price += 100">เพิ่มราคา</button>
+                        <button class="button is-danger" v-if="price === 0" v-on:click="price -= 100" disabled>ลดราคา</button>
+                        <button class="button is-danger" v-else v-on:click="price -= 100">ลดราคา</button>
+                        <button class="button is-success" v-if="price === 0" v-on:click="freeconfirm">ยืนยันปล่อยฟรี</button>
+                        <button class="button is-success" v-else v-on:click="confirm">ยืนยันขาย</button>
+                    </div>
                 </div>
             </div>
+            <footer class="has-background-primary has-text-white">
+                <p class="has-text-centered">{{ copyright }}</p>
+            </footer>
         </div>
     </body>
     <script src="index.js"></script>

@@ -1,0 +1,32 @@
+{
+    "short_name": "Ota Shop Center",
+    "name": "Ota Shop Center",
+    "icons": [{
+            "src": "img/shopicon.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "img/shopicon.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "img/shopicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/shopicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "Pink",
+    "background_color": "Green",
+    "prefer_related_applications": false
+}
